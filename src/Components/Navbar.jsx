@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 // Using "useTheme" custom hook to access currentTheme and toggleTheme easily
 import { useTheme } from './Context/ThemeContext';
+
 // To get the moon icon and the sun icon to toggle between the themes 
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+
+
 
 
 export default Navbar = () => {
