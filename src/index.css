@@ -8,12 +8,16 @@
     --color-primary: #1F2937;
     --color-secondary: #E5E7EB;
     --color-accent: #3B82F6;
+    --card-background: #FFFFFF; /* Light theme card background */
+    --card-border: #E5E7EB; /* Light theme card border */
   }
   
   .dark {
     --color-primary: #1E3A8A;
     --color-secondary: #D1D5DB;
     --color-accent: #60A5FA;
+    --card-background: #111827; /* Dark theme card background */
+    --card-border: #1F2937; /* Dark theme card border */
   }
   
   body {
@@ -44,6 +48,12 @@
   
   .light h1, .light h2, .light h3, .light p, .light li {
     color: #111827 !important;
+  }
+
+  /* Custom class for cards to use theme variables */
+  .themed-card {
+    background-color: var(--card-background);
+    border-color: var(--card-border);
   }
 }
 
