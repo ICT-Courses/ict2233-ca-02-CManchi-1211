@@ -10,12 +10,12 @@ const Home = () => {
         </h1>
 
         {/*Introductory Paragraph*/}
-        <p className="text-xl text-gray-800 dark:text-gray-700 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-800 dark:text-gray-700 max-w-3xl mx-auto fade-in">
           An undergraduate at the University of Sri Jayewardenepura,
           with a keen interest in UI/UX design, web development, and programming. 
           I am continuously expanding my knowledge by exploring new concepts and technologies to create innovative digital experiences.
         </p>
-        <div className="mt-8">
+        <div className="mt-8 fade-in">
           <a
             href="/projects"
             className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
