@@ -9,15 +9,6 @@ const Home = () => {
           Hi, I'm <span className="text-blue-600">Chaya Manchanayake</span> {/*Heading*/}
         </h1>
 
-        {/* Profile Photo */}
-        <div className="flex justify-center mb-2">
-        <img 
-            src="../public/Images/Me.jpg" 
-            alt="Chaya Manchanayake" 
-            className="w-5 h-5 rounded-full object-cover border-2 border-blue-200 shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-        </div>
-
         {/*Introductory Paragraph*/}
         <p className="text-xl text-gray-800 dark:text-gray-700 max-w-3xl mx-auto">
           An undergraduate at the University of Sri Jayewardenepura,
@@ -31,6 +22,18 @@ const Home = () => {
           >
             View My Work
           </a>
+          <p></p>
+
+        {/* Profile Photo */}
+        <div className="flex justify-center mb-2">
+        <img 
+            src="../public/Images/Me.jpg" 
+            alt="Chaya Manchanayake" 
+            className="w-5 h-5 rounded-full object-cover border-0 border-blue-200 shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        </div>
+
+        
         </div>
       </div>
     </div>
