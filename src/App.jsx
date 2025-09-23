@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from '/context/ThemeContext';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Projects from './Pages/Projects';
-import Contact from './Pages/Contact';
-import NotFound from './Pages/NotFound';
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
+import  { ThemeProvider }  from './context/themeContext.jsx';
+import Home from './Pages/Home.jsx';
+import About from './Pages/About.jsx';
+import Projects from './Pages/Projects.jsx';
+import Contact from './Pages/Contact.jsx';
+import NotFound from './Pages/NotFound.jsx';
+import Navbar from './Components/Navbar.jsx';
+import Footer from './Components/Footer.jsx';
 import './index.css';
 
 // This component wraps the entire application with routing and theme context.

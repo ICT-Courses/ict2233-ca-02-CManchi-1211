@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default Contact = () => {
+const Contact = () => {
   return (
     <div className="page-container flex items-center justify-center pt-10">
       <div className="max-w-2xl w-full text-center space-y-6">
@@ -36,3 +36,5 @@ export default Contact = () => {
     </div>
   );
 };
+
+export default Contact;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // Using "useTheme" custom hook to access currentTheme and toggleTheme easily
-import { useTheme } from './context/ThemeContext';
+import { useTheme } from '../context/themeContext.jsx';
 // To get the moon icon and the sun icon to toggle between the themes
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 
@@ -23,15 +23,11 @@ const Navbar = () => {
       </div>
       {/* Toggle between Dark and Light modes on click*/}
       <button
-        onClick={toggleTheme}
-        className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none"
-      >
-        {currentTheme === 'light' ? (
-          <MoonIcon className="h-6 w-6" />
-        ) : (
-          <SunIcon className="h-6 w-6" />
-        )}
-      </button>
+        onClick={toggleTheme}
+        className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none"
+>
+        {currentTheme === 'light' ? '🌙' : '☀️'}
+      </button>
     </nav>
   );
 };

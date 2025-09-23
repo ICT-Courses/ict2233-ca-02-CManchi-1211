@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ProjectCard from '../Components/ProjectCard';
+import ProjectCard from '../Components/ProjectCard.jsx';
 
 // Get a list of repositories in the GtHub account and show them seperate cards
 const Projects = () => {

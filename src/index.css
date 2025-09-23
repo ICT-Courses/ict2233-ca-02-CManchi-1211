@@ -1,10 +1,5 @@
-@import "tailwindcss";
 @tailwind base;
-
-/*Load styles for pre-build components*/
 @tailwind components;
-
-/*Load utility classes like flex*/
 @tailwind utilities;
 
 @layer base {
@@ -14,28 +9,27 @@
     --color-secondary: #E5E7EB;
     --color-accent: #3B82F6;
   }
+  
   .dark {
     --color-primary: #1E3A8A;
     --color-secondary: #D1D5DB;
     --color-accent: #60A5FA;
   }
-
+  
   body {
     font-family: 'Inter', sans-serif;
-    color: theme('colors.gray.900');
-    background-color: theme('colors.gray.50');
   }
-
+  
   /* Apply background images based on the theme */
   .dark {
-    background-image: url('Galaxy (1).jpg');
+    background-image: url('/Images/Galaxy (1).jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
-
+  
   .light {
-    background-image: url('Galaxy (5).jpg');
+    background-image: url('/Images/Galaxy (5).jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

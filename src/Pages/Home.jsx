@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default Home = () => {
+const Home = () => {
   return (
     <div className="page-container flex items-center justify-center text-center">
       <div className="space-y-4">
@@ -26,3 +26,5 @@ export default Home = () => {
     </div>
   );
 };
+
+export default Home;

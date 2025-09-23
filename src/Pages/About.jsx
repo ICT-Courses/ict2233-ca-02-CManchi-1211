@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-export default About = () => {
+const About = () => {
   return (
     <div className="page-container pt-10">
-        
+
         {/*About Me section*/}
       <h1 className="text-4xl font-bold text-center mb-6 text-gray-900 dark:text-white">About Me</h1>
       <div className="max-w-4xl mx-auto space-y-8">
@@ -35,3 +35,5 @@ export default About = () => {
     </div>
   );
 };
+
+export default About;
