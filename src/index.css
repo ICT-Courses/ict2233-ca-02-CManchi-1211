@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Define CSS variables for themes */
+  :root {
+    --color-primary: #1F2937;
+    --color-secondary: #E5E7EB;
+    --color-accent: #103064;
+    --card-background: #FFFFFF; /* Light theme card background */
+    --card-border: #E5E7EB; /* Light theme card border */
+    --nav-bg: rgba(111, 111, 129, 0.85); /* Light theme navbar background */
+    --nav-text: #2d3c5a; /* Light theme navbar text color */
+    --button-bg-light: #103064; /* Light theme button background */
+    --button-text-light: #FFFFFF; /* Light theme button text */
+  }
+
+  .dark {
+    --color-primary: #1E3A8A;
+    --color-secondary: #D1D5DB;
+    --color-accent: #355f91;
+    --card-background: #111827; /* Dark theme card background */
+    --card-border: #1F2937; /* Dark theme card border */
+    --nav-bg: rgba(17, 24, 39, 0.85); /* Dark theme navbar background */
+    --nav-text: #F9FAFB; /* Dark theme navbar text color */
+    --button-bg-dark: #355f91; /* Dark theme button background */
+    --button-text-dark: #FFFFFF; /* Dark theme button text */
+  }
+
+  body {
+    font-family: 'Inter', Comic sans;
+    transition: all 0.3s ease;
+    font-size: larger;
+  }
+
+  /* Apply background images based on the theme */
+  .light {
+    background-image: url('/Images/Galaxy (5).jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #111827;
+  }
+
+  .dark {
+    background-image: url('/Images/Galaxy (1).jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #F9FAFB;
+  }
+
+  /* Ensure that the text is visible on both themes */
+  .dark h1, .dark h2, .dark h3, .dark p, .dark li {
+    color: #F9FAFB !important;
+  }
+
+  .light h1, .light h2, .light h3, .light p, .light li {
+    color: #111827 !important;
+  }
+
+  /* A class for cards to use theme variables */
+  .themed-card {
+    background-color: var(--card-background);
+    border-color: var(--card-border);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  .dark .themed-card {
+    background-color: rgba(17, 24, 39, 0.85);
+  }
+
+  /* A class for themed buttons */
+.themed-button {
+    background-color: var(--button-bg-light);
+    color: var(--button-text-light);
+    transition: all 0.3s ease;
+    width: 150px;
+    height: 50px;
+}
+
+.themed-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dark .themed-button {
+    background-color: var(--button-bg-dark);
+    color: var(--button-text-dark);
+}
+
+.dark .themed-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+  /* Page container with proper spacing */
+  .page-container {
+    padding-top: 5rem; /* Space for fixed navbar */
+    min-height: 100vh;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-in {
+  animation: slideIn 0.6s ease-out;
+}
+
+/* Card hover effects with a more pronounced 3D effect */
+.card-hover {
+  transition: all 0.3s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card-hover:hover {
+  transform: translateY(-12px) scale(1.03) rotateX(8deg) rotateY(-2deg);
+  box-shadow: 
+    0 30px 60px -12px rgba(0, 0, 0, 0.3), 
+    0 15px 25px -5px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* 3D Button Animation for "View My Work" and similar buttons */
+.view-work-btn, .contact-btn {
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  border: none;
+  overflow: hidden;
+}
+
+.view-work-btn::before, .contact-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.view-work-btn:hover::before, .contact-btn:hover::before {
+  left: 100%;
+}
+
+.view-work-btn:hover {
+  transform: translateY(-8px) scale(1.05) rotateX(-5deg);
+  box-shadow: 
+    0 20px 40px -5px rgba(102, 126, 234, 0.4),
+    0 10px 20px -5px rgba(118, 75, 162, 0.3),
+    0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.contact-btn:hover {
+  transform: translateY(-8px) scale(1.05) rotateX(-5deg);
+  box-shadow: 
+    0 20px 40px -5px rgba(147, 51, 234, 0.4),
+    0 10px 20px -5px rgba(219, 39, 119, 0.3),
+    0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+/* New Navbar-specific CSS rules for clarity and theming */
+.nav-text-color {
+  color: var(--nav-text);
+}
+
+.nav-active-link {
+  background-color: var(--color-accent);
+  color: white;
+}

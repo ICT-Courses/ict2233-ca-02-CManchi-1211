@@ -1,0 +1,84 @@
+/* Your custom CSS here. For example, animations or specific component styles not easily handled by Tailwind. */
+
+/* Basic layout and typography */
+.page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 7rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Animations using keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Navbar styles */
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+}
+
+.nav-typo{
+  font-size: 1rem;
+  margin: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(118, 107, 157)
+}
+
+/*Navbar css styles*/
+.nav-ul{
+  display: flex;
+}
+
+.nav-li{
+    list-style: none;
+}
+
+.nav-ul-li-a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  margin:  0 rem;
+  border-radius: 0.5rem;
+}
+
+/*Table border radius*/
+.b-radius{
+  border-radius: 0.5rem;
+}
+
+/*Text Box border radius*/
+.t-radius{
+  border-radius: 0.3rem;
+}
+
+
+/*Text Box height and width*/
+.t-wi-he{
+    height: 30px;
+    width: 1000px
+}
+
+/*Text area height and width*/
+.ta-wi-he{
+    width: 1000px
+}
+
+/*Button's corner radius and align*/
+.b-ra-al{
+    border-radius: 0.5rem;
+    align-items: center;
+}
