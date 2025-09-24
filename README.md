@@ -52,6 +52,13 @@ This portfolio website showcases my skills, projects, and professional backgroun
     •	Spacing: Consistent 8px-based spacing system
 ### Deployment
     This project is configured for deployment on GitHub Pages.
+### Live Demo Link
+    https://ict-courses.github.io/ict2233-ca-02-CManchi-1211/
+### Installation Steps
+    ~ Clone the Repository
+    ~ Install Dependancies : npm i
+    ~ Start Dvelopment server : npm run dev
+    ~ Open browser, then Navigate to http://localhost:5173  to visit the website
 
     This project is created for educational purposes as part of ICT 2233 - Web Application Development course assignment.
 
