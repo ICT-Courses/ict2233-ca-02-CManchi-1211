@@ -10,8 +10,11 @@ const About = () => {
         <div className="text-center mb-12 fade-in">
           <h1 className="text-4xl font-bold text-black dark:text-white mb-4">About Me</h1>
           <p className="text-lg text-gray-700 dark:text-gray-200 max-w-4xl mx-auto">
-            Currently pursuing my undergraduate degree with focus on software development, web technologies, operating systems, and data structures and algorithms.
-          </p>
+                I am currently pursuing my undergraduate degree, through which I am gaining extensive knowledge in fields such as 
+                software development, web technologies, operating systems, and data structures and algorithms. 
+                I am particularly passionate about UI/UX design and love creating user-friendly and visually appealing digital experiences.
+                Having worked on my projects as both a developer and a Quality Assurance (QA) engineer, 
+                I have a strong understanding of a project's functionality and its quality. These experiences allow me to add value to any team.          </p>
         </div>
 
         {/* All Sections in a Single Column */}
