@@ -37,6 +37,7 @@
   color: rgb(118, 107, 157)
 }
 
+/*Navbar css styles*/
 .nav-ul{
   display: flex;
 }
@@ -54,10 +55,30 @@
   border-radius: 0.5rem;
 }
 
+/*Table border radius*/
 .b-radius{
   border-radius: 0.5rem;
 }
 
+/*Text Box border radius*/
 .t-radius{
-  border-radius: 0.3rem
+  border-radius: 0.3rem;
+}
+
+
+/*Text Box height and width*/
+.t-wi-he{
+    height: 30px;
+    width: 1000px
+}
+
+/*Text area height and width*/
+.ta-wi-he{
+    width: 1000px
+}
+
+/*Button's corner radius and align*/
+.b-ra-al{
+    border-radius: 0.5rem;
+    align-items: center;
 }

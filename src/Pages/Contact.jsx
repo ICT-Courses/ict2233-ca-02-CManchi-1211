@@ -112,57 +112,63 @@ const Contact = () => {
         </div>
 
         {/* Contact Form Column */}
-        <div className="p-6 b-radius slide-in">
+        <div className="p-6 b-radius slide-in page-container justify-center">
           <h2 className="text-2xl font-semibold text-black dark:text-white mb-4 text-left">Send me a message</h2>
           <form onSubmit={handleSubmit} className="space-y-4 text-left flex-1">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
-                Name
+                Name :
               </label>
+              <p></p>
               <input
                 type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`w-full px-4 py-4 t-radius bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.name ? 'border-red-500' : 'border-transparent'}`}
+                className={`w-full px-4 py-4 t-radius t-wi-he bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.name ? 'border-red-500' : 'border-transparent'}`}
               />
+              <p></p>
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
-                Email
+                Email :
               </label>
+              <p></p>
               <input
                 type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-4 py-2 t-radius bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.email ? 'border-red-500' : 'border-transparent'}`}
+                className={`w-full px-4 py-2 t-radius t-wi-he bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.email ? 'border-red-500' : 'border-transparent'}`}
               />
+              <p></p>
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
-                Message
+                Message :
               </label>
+              <p></p>
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 rows="4"
-                className={`w-full px-4 py-2 t-radius bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.message ? 'border-red-500' : 'border-transparent'}`}
+                className={`w-full px-4 py-2 t-radius ta-wi-he bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.message ? 'border-red-500' : 'border-transparent'}`}
               ></textarea>
+              <p></p>
               {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
             </div>
 
             <button
               type="submit"
-              className={` themed-button py-2 px-8 t-radius font-bold text-white transition-all duration-300 ${status === 'submitting' ? 'bg-gray-500 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'}`}
+              className={` themed-button justify-center py-2 px-8 b-ra-al font-bold text-white transition-all duration-300 ${status === 'submitting' ? 'bg-gray-500 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'}`}
               disabled={status === 'submitting'}
             >
               {status === 'submitting' ? 'Sending...' : 'Send Message'}
@@ -179,7 +185,7 @@ const Contact = () => {
       </div>
 
       {/* Additional Contact Info */}
-      <div className="mt-12 p-6 rounded-2xl slide-in">
+      <div className="mt-12 p-6 rounded-2xl slide-in page-container">
         <h2 className="text-2xl font-semibold text-black dark:text-white mb-4">Let's Work Together</h2>
         <p className="text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
           I'm always interested in new opportunities and collaborations. Whether you have a project idea,

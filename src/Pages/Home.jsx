@@ -1,7 +1,9 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="page-container flex items-center justify-center text-center">
       <div className="space-y-4">
@@ -16,25 +18,23 @@ const Home = () => {
           I am continuously expanding my knowledge by exploring new concepts and technologies to create innovative digital experiences.
         </p>
         <div className="mt-8 fade-in">
-          <a
-            href="/projects"
-            className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+          <button
+            onClick={() => navigate('/about')}
+            className="themed-button b-ra-al"
           >
             View My Work
-          </a>
+          </button>
           <p></p>
           <p></p>
 
-        {/* Profile Photo */}
-        <div className="flex justify-center mb-2">
-        <img 
-            src="../public/Images/Me.jpg" 
-            alt="Chaya Manchanayake" 
-            className="w-5 h-5 rounded-full object-cover border-0 border-blue-200 shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-        </div>
-
-        
+          {/* Profile Photo */}
+          <div className="flex justify-center mb-2">
+            <img 
+              src="../public/Images/Me.jpg" 
+              alt="Chaya Manchanayake" 
+              className="w-5 h-5 rounded-full object-cover border-0 border-blue-200 shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
         </div>
       </div>
     </div>

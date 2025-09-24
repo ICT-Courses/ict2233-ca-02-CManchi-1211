@@ -12,7 +12,7 @@
     --card-border: #E5E7EB; /* Light theme card border */
     --nav-bg: rgba(111, 111, 129, 0.85); /* Light theme navbar background */
     --nav-text: #2d3c5a; /* Light theme navbar text color */
-    --button-bg-light: #4CAF50; /* Light theme button background */
+    --button-bg-light: #103064; /* Light theme button background */
     --button-text-light: #FFFFFF; /* Light theme button text */
   }
 
@@ -24,7 +24,7 @@
     --card-border: #1F2937; /* Dark theme card border */
     --nav-bg: rgba(17, 24, 39, 0.85); /* Dark theme navbar background */
     --nav-text: #F9FAFB; /* Dark theme navbar text color */
-    --button-bg-dark: #FF69B4; /* Dark theme button background */
+    --button-bg-dark: #355f91; /* Dark theme button background */
     --button-text-dark: #FFFFFF; /* Dark theme button text */
   }
 
@@ -78,6 +78,7 @@
     color: var(--button-text-light);
     transition: all 0.3s ease;
     width: 150px;
+    height: 50px;
 }
 
 .themed-button:hover {
