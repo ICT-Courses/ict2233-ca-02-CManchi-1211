@@ -55,5 +55,9 @@
 }
 
 .b-radius{
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.t-radius{
+  border-radius: 0.3rem
 }

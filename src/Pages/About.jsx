@@ -18,14 +18,14 @@ const About = () => {
       <div className="space-y-6">
       <section>
     <h2 className="text-2xl font-bold text-black dark:text-white mb-6 text-left">Technical Skills</h2>
-    <div className="themed-card border-2 p-6 card-hover transition-all duration-300 mx-auto max-w-2xl rounded-2xl overflow-hidden">
-      <table className="w-full">
+    <div className="themed-card border-2 p-6 card-hover transition-all duration-300 mx-auto max-w-2xl b-radius overflow-hidden">
+      <table className="w-full b-radius">
         <tbody>
           <tr>
             <td className="p-2">
               <div className="text-center">
                 <h3 className="text-xl font-semibold text-black dark:text-white">Python</h3>
-                <span className="px-3 py-1 bg-gray-600/50 text-gray-300 rounded-full text-sm">Basic</span>
+                <span className="px-3 py-1 bg-gray-600/50 text-gray-300 b-radius text-sm">Basic</span>
                 <p className="mt-2 text-gray-700 dark:text-gray-300 text-sm">File handling, basic concepts</p>
               </div>
             </td>
@@ -77,7 +77,7 @@ const About = () => {
           <section>
             <h2 className="text-2xl font-bold text-black dark:text-white mb-6">Databases</h2>
             
-            <div className="themed-card border-2 p-4 card-hover transition-all duration-300 rounded-2xl overflow-hidden">
+            <div className="themed-card border-2 p-4 card-hover transition-all duration-300 b-radius overflow-hidden">
               <table className="w-full">
                 <tbody>
                   <tr>
@@ -113,7 +113,7 @@ const About = () => {
           <section>
             <h2 className="text-2xl font-bold text-black dark:text-white mb-6">Development Tools</h2>
             
-            <div className="themed-card border-2 p-4 card-hover transition-all duration-300 rounded-2xl overflow-hidden">
+            <div className="themed-card border-2 p-4 card-hover transition-all duration-300 b-radius overflow-hidden">
               <table className="w-full">
                 <tbody>
                   <tr>
@@ -173,7 +173,7 @@ const About = () => {
           <section>
             <h2 className="text-2xl font-bold text-black dark:text-white mb-6">Soft Skills</h2>
             
-            <div className="themed-card border-2 p-4 card-hover transition-all duration-300 rounded-2xl overflow-hidden">
+            <div className="themed-card border-2 p-4 card-hover transition-all duration-300 b-radius overflow-hidden">
               <table className="w-full">
                 <tbody>
                   <tr>
