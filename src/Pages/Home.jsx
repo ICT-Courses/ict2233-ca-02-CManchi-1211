@@ -10,7 +10,7 @@ const Home = () => {
         </h1>
 
         {/*Introductory Paragraph*/}
-        <p className="text-xl text-gray-800 dark:text-gray-700 max-w-3xl mx-auto fade-in">
+        <p className="text-xl text-gray-1000 dark:text-gray-700 max-w-8xl mx-auto fade-in">
           An undergraduate at the University of Sri Jayewardenepura,
           with a keen interest in UI/UX design, web development, and programming. 
           I am continuously expanding my knowledge by exploring new concepts and technologies to create innovative digital experiences.
@@ -22,6 +22,7 @@ const Home = () => {
           >
             View My Work
           </a>
+          <p></p>
           <p></p>
 
         {/* Profile Photo */}

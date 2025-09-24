@@ -12,17 +12,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed w-full top-0 p-4 shadow-lg z-50 backdrop-blur-md transition-colors duration-300 nav-typo nav-ul nav-ul-li-a"
+      className="fixed w-full top-0 left-0 right-0 p-4 shadow-lg z-50 backdrop-blur-md transition-colors duration-300 nav-typo nav-ul nav-ul-li-a rounded-lg"
       style={{ backgroundColor: "var(--nav-bg)" }}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <Link
-          to="/"
-          className="text-2xl font-bold font-serif nav-text-color nav-typo nav-ul nav-li nav-ul-li-a"
-        >
-          {MyName}
-        </Link>
-        <div className="flex items-center space-x-6 ">
+      <div className="flex items-center space-x-6 ">
           <ul className="flex space-x-0 list-none ">
             <li>
               <Link 
@@ -59,18 +53,17 @@ const Navbar = () => {
                 }`}
               > Contact </Link>
             </li>
+          </ul>
           
-          <li>
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
-            className="text-2xl nav-text-color hover:scale-110 transition-transform duration-300 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 nav-typo nav-ul nav-ul-li-a"
-            title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
-          >
+            className="text-0.5xl nav-text-color hover:scale-100 transition-transform duration-300  rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 nav-typo nav-ul nav-ul-li-a"
+            title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}>
             {theme === "dark" ? <BsSun /> : <BsMoon />}
           </button>
-          </li>
-          </ul>
+          
+          
         </div>
       </div>
     </nav>

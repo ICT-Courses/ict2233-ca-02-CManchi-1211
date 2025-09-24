@@ -10,7 +10,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('https://github.com/dashboard');
+        const response = await fetch('https://api.github.com/users/CManchi-1211/repos');        
         if (!response.ok) {
           throw new Error('Failed to fetch projects.');
         }
