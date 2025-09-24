@@ -98,7 +98,7 @@ const Contact = () => {
                 href={method.url}
                 target={method.name !== 'Email' ? "_blank" : undefined}
                 rel={method.name !== 'Email' ? "noopener noreferrer" : undefined}
-                className={`w-32 h-32 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-xl flex items-center justify-center text-6xl`}
+                className={`w-32 h-32 b-radius transition-all duration-300 hover:scale-110 hover:shadow-xl flex items-center justify-center text-6xl`}
                 style={{ animationDelay: `${index * 0.2}s` }}
                 title={method.name}
               >
@@ -108,7 +108,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form Column */}
-          <div className="p-6 rounded-2xl slide-in">
+          <div className="p-6 b-radius slide-in">
             <h2 className="text-2xl font-semibold text-black dark:text-white mb-4 text-left">Send me a message</h2>
             <form onSubmit={handleSubmit} className="space-y-4 text-left flex-1">
               <div>
@@ -121,7 +121,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.name ? 'border-red-500' : 'border-transparent'}`}
+                  className={`w-full px-4 py-2 b-radius bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.name ? 'border-red-500' : 'border-transparent'}`}
                 />
                 {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
               </div>
@@ -136,7 +136,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.email ? 'border-red-500' : 'border-transparent'}`}
+                  className={`w-full px-4 py-2 b-radius bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.email ? 'border-red-500' : 'border-transparent'}`}
                 />
                 {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
               </div>
@@ -151,14 +151,14 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
-                  className={`w-full px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.message ? 'border-red-500' : 'border-transparent'}`}
+                  className={`w-full px-4 py-2 b-radius bg-gray-100 dark:bg-gray-700 text-black dark:text-white border-2 focus:outline-none focus:ring-2 ${errors.message ? 'border-red-500' : 'border-transparent'}`}
                 ></textarea>
                 {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
               </div>
 
               <button
                 type="submit"
-                className={`w-full py-2 px-4 rounded-lg font-bold text-white transition-all duration-300 ${status === 'submitting' ? 'bg-gray-500 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'}`}
+                className={`w-full py-2 px-4 b-radius font-bold text-white transition-all duration-300 ${status === 'submitting' ? 'bg-gray-500 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'}`}
                 disabled={status === 'submitting'}
               >
                 {status === 'submitting' ? 'Sending...' : 'Send Message'}
@@ -175,7 +175,7 @@ const Contact = () => {
         </div>
 
         {/* Additional Contact Info */}
-        <div className="mt-12 p-6 rounded-2xl slide-in">
+        <div className="mt-12 p-6 b-radius slide-in">
           <h2 className="text-2xl font-semibold text-black dark:text-white mb-4">Let's Work Together</h2>
           <p className="text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
             I'm always interested in new opportunities and collaborations. Whether you have a project idea,
