@@ -24,7 +24,14 @@ const Home = () => {
           </a>
           <p></p>
 
-        
+        {/* Profile Photo */}
+        <div className="flex justify-center mb-2">
+        <img 
+            src="../public/Images/Me.jpg" 
+            alt="Chaya Manchanayake" 
+            className="w-5 h-5 rounded-full object-cover border-0 border-blue-200 shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        </div>
 
         
         </div>

@@ -23,7 +23,7 @@ const Navbar = () => {
           {MyName}
         </Link>
         <div className="flex items-center space-x-6 ">
-          <ul className="flex space-x-6 list-none ">
+          <ul className="flex space-x-0 list-none ">
             <li>
               <Link 
                 to="/" 
@@ -59,8 +59,8 @@ const Navbar = () => {
                 }`}
               > Contact </Link>
             </li>
-          </ul>
           
+          <li>
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
@@ -69,6 +69,8 @@ const Navbar = () => {
           >
             {theme === "dark" ? <BsSun /> : <BsMoon />}
           </button>
+          </li>
+          </ul>
         </div>
       </div>
     </nav>
