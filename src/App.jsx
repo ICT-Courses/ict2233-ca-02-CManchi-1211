@@ -9,6 +9,7 @@ import NotFound from './Pages/NotFound.jsx';
 import Navbar from './Components/Navbar.jsx';
 import Footer from './Components/Footer.jsx';
 import './index.css';
+import './App.css';
 
 // This component wraps the entire application with routing and theme context.
 const App = () => {

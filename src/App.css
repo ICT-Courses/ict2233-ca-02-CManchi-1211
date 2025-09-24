@@ -4,7 +4,7 @@
 .page-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,4 +19,37 @@
 
 .fade-in {
   animation: fadeIn 1s ease-in-out;
+}
+
+/* Navbar styles */
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+}
+
+.nav-typo{
+  font-size: 1rem;
+  margin: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(118, 107, 157)
+}
+
+.nav-ul{
+  display: flex;
+}
+
+.nav-li{
+    list-style: none;
+}
+
+.nav-ul-li-a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  margin:  0 rem;
+  border-radius: 0.5rem;
 }

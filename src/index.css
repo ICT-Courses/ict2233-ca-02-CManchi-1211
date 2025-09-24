@@ -7,23 +7,28 @@
   :root {
     --color-primary: #1F2937;
     --color-secondary: #E5E7EB;
-    --color-accent: #3B82F6;
+    --color-accent: #103064;
     --card-background: #FFFFFF; /* Light theme card background */
     --card-border: #E5E7EB; /* Light theme card border */
+    --nav-bg: rgba(111, 111, 129, 0.85); /* Light theme navbar background */
+    --nav-text: #2d3c5a; /* Light theme navbar text color */
   }
-  
+
   .dark {
     --color-primary: #1E3A8A;
     --color-secondary: #D1D5DB;
-    --color-accent: #60A5FA;
+    --color-accent: #355f91;
     --card-background: #111827; /* Dark theme card background */
     --card-border: #1F2937; /* Dark theme card border */
+    --nav-bg: rgba(17, 24, 39, 0.85); /* Dark theme navbar background */
+    --nav-text: #F9FAFB; /* Dark theme navbar text color */
   }
-  
+
   body {
     font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
   }
-  
+
   /* Apply background images based on the theme */
   .light {
     background-image: url('/Images/Galaxy (5).jpg');
@@ -32,7 +37,7 @@
     background-attachment: fixed;
     color: #111827;
   }
-  
+
   .dark {
     background-image: url('/Images/Galaxy (1).jpg');
     background-size: cover;
@@ -40,20 +45,32 @@
     background-attachment: fixed;
     color: #F9FAFB;
   }
-  
-  /* Ensure text is visible on both themes */
+
+  /* Ensure that the text is visible on both themes */
   .dark h1, .dark h2, .dark h3, .dark p, .dark li {
     color: #F9FAFB !important;
   }
-  
+
   .light h1, .light h2, .light h3, .light p, .light li {
     color: #111827 !important;
   }
 
-  /* Custom class for cards to use theme variables */
+  /* A class for cards to use theme variables */
   .themed-card {
     background-color: var(--card-background);
     border-color: var(--card-border);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  .dark .themed-card {
+    background-color: rgba(17, 24, 39, 0.85);
+  }
+
+  /* Page container with proper spacing */
+  .page-container {
+    padding-top: 5rem; /* Space for fixed navbar */
+    min-height: 100vh;
   }
 }
 
@@ -76,12 +93,73 @@
   animation: slideIn 0.6s ease-out;
 }
 
-/* Card hover effects */
+/* Card hover effects with a more pronounced 3D effect */
 .card-hover {
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  transform-style: preserve-3d;
 }
 
 .card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-12px) scale(1.03) rotateX(8deg) rotateY(-2deg);
+  box-shadow: 
+    0 30px 60px -12px rgba(0, 0, 0, 0.3), 
+    0 15px 25px -5px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* 3D Button Animation for "View My Work" and similar buttons */
+.view-work-btn, .contact-btn {
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  border: none;
+  overflow: hidden;
+}
+
+.view-work-btn::before, .contact-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.view-work-btn:hover::before, .contact-btn:hover::before {
+  left: 100%;
+}
+
+.view-work-btn:hover {
+  transform: translateY(-8px) scale(1.05) rotateX(-5deg);
+  box-shadow: 
+    0 20px 40px -5px rgba(102, 126, 234, 0.4),
+    0 10px 20px -5px rgba(118, 75, 162, 0.3),
+    0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.contact-btn:hover {
+  transform: translateY(-8px) scale(1.05) rotateX(-5deg);
+  box-shadow: 
+    0 20px 40px -5px rgba(147, 51, 234, 0.4),
+    0 10px 20px -5px rgba(219, 39, 119, 0.3),
+    0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+/* New Navbar-specific CSS rules for clarity and theming */
+.nav-text-color {
+  color: var(--nav-text);
+}
+
+.nav-active-link {
+  background-color: var(--color-accent);
+  color: white;
 }
