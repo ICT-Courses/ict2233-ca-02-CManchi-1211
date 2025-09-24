@@ -10,6 +10,7 @@ const Home = () => {
         <h1 className="text-5xl font-bold text-gray-900 dark:text-white fade-in">
           Hi, I'm <span className="text-blue-600">Chaya Manchanayake</span> {/*Heading*/}
         </h1>
+        <p></p>
 
         {/*Introductory Paragraph*/}
         <p className="text-xl text-gray-1000 dark:text-gray-700 max-w-8xl mx-auto fade-in">
@@ -17,6 +18,8 @@ const Home = () => {
           with a keen interest in UI/UX design, web development, and programming. 
           I am continuously expanding my knowledge by exploring new concepts and technologies to create innovative digital experiences.
         </p>
+        <p></p>
+        <p></p>
         <div className="mt-8 fade-in">
           <button
             onClick={() => navigate('/about')}
@@ -24,6 +27,8 @@ const Home = () => {
           >
             View My Work
           </button>
+          <p></p>
+          <p></p>
           <p></p>
           <p></p>
 
